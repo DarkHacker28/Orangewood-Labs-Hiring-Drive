@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(ros_session)
+
+find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  roscpp
+  rospy
+  turtlesim
+)
+
+catkin_package(
+  CATKIN_DEPENDS geometry_msgs roscpp rospy turtlesim
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+# Uncomment the following if you add a C++ executable
+# add_executable(turtle_rect_path src/turtle_rect_path.cpp)
+# target_link_libraries(turtle_rect_path ${catkin_LIBRARIES})
+
+# Uncomment the following if you add Python scripts
+# catkin_install_python(PROGRAMS
+#   scripts/turtle_rect_path.py
+#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
